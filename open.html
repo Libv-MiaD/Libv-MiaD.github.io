@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开放平台 | 喵滴</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700&amp;display=swap">
+    <meta name="description" content="做不一样的自己">
+    <link rel="preload" href="/assets/css/0.styles.39d1b026.css" as="style"><link rel="preload" href="/assets/js/app.8c74c1db.js" as="script"><link rel="preload" href="/assets/js/7.da31186b.js" as="script"><link rel="preload" href="/assets/js/2.6f8b3818.js" as="script"><link rel="preload" href="/assets/js/19.5f9449e8.js" as="script"><link rel="prefetch" href="/assets/js/10.48406e9d.js"><link rel="prefetch" href="/assets/js/11.0894962a.js"><link rel="prefetch" href="/assets/js/12.c840b106.js"><link rel="prefetch" href="/assets/js/13.fa4ff30e.js"><link rel="prefetch" href="/assets/js/14.d1d90514.js"><link rel="prefetch" href="/assets/js/15.5cb8d87f.js"><link rel="prefetch" href="/assets/js/16.3d39496c.js"><link rel="prefetch" href="/assets/js/17.d417d241.js"><link rel="prefetch" href="/assets/js/18.726b31bf.js"><link rel="prefetch" href="/assets/js/3.a2ae1510.js"><link rel="prefetch" href="/assets/js/4.16c498b2.js"><link rel="prefetch" href="/assets/js/5.6cc5f39d.js"><link rel="prefetch" href="/assets/js/6.b3395ce0.js"><link rel="prefetch" href="/assets/js/8.1754cb45.js"><link rel="prefetch" href="/assets/js/9.b8280d92.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.39d1b026.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">喵滴</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/download.html" class="nav-link">
+  下载
+</a></div><div class="nav-item"><a href="/help.html" class="nav-link">
+  使用帮助
+</a></div><div class="nav-item"><a href="/open.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  开放平台
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/download.html" class="nav-link">
+  下载
+</a></div><div class="nav-item"><a href="/help.html" class="nav-link">
+  使用帮助
+</a></div><div class="nav-item"><a href="/open.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  开放平台
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开放平台"><a href="#开放平台" class="header-anchor">#</a> 开放平台</h1> <blockquote><p>实验功能，请勿过度依赖</p></blockquote> <p>喵滴的高级用户可以自己动手搭建功能，自行调用喵滴的开放接口
+目前已经实现的开放能力有：<code>添加文章</code></p> <h3 id="接入文档"><a href="#接入文档" class="header-anchor">#</a> 接入文档</h3> <ol><li>向目标地址：<code>https://sunshinesudio.club:8012/user/open/key</code> 发送post请求，其中字段<code>un</code>为用户名，字段<code>pwd</code>为密码</li></ol> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'https://sunshinesudio.club:8012/user/open/key' \
+--form 'un=&quot;用户名&quot;' \
+--form 'pwd=&quot;密码&quot;'
+</code></pre></div><ol start="2"><li>保存好喵滴返回给您的开放平台密码<code>key</code>,每次使用第一个步骤，<code>key</code>都会更新</li></ol> <div class="language- extra-class"><pre class="language-text"><code>//第一步返回的正确结果
+{
+    &quot;info&quot;: &quot;key:85H7f36H2Rv2u3fYk9vLiQz&quot;,
+    &quot;code&quot;: 200
+}
+</code></pre></div><p>其中<code>85H7f36H2Rv2u3fYk9vLiQz</code>为<code>key</code>。</p> <ol start="3"><li><code>添加文章</code></li></ol> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'https://sunshinesudio.club:8012/page/open/add' \
+--form 'key=&quot;开放码&quot;' \
+--form 'Title=&quot;标题&quot;' \
+--form 'Content=&quot;内容&quot;' \
+--form 'Book=&quot;书本名&quot;' \
+--form 'Chara=&quot;目录名&quot;'
+</code></pre></div><p>其中所有字段都必须填写,同一个书本以及目录下面，不能出现相同的文章标题。</p> <p>返回添加成功结果</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;info&quot;: &quot;xxxx&quot;,//文章id
+    &quot;code&quot;: 200
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8c74c1db.js" defer></script><script src="/assets/js/7.da31186b.js" defer></script><script src="/assets/js/2.6f8b3818.js" defer></script><script src="/assets/js/19.5f9449e8.js" defer></script>
+  </body>
+</html>
