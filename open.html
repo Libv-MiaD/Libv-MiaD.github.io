@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700&amp;display=swap">
     <meta name="description" content="做不一样的自己">
-    <link rel="preload" href="/assets/css/0.styles.39d1b026.css" as="style"><link rel="preload" href="/assets/js/app.8c74c1db.js" as="script"><link rel="preload" href="/assets/js/7.da31186b.js" as="script"><link rel="preload" href="/assets/js/2.6f8b3818.js" as="script"><link rel="preload" href="/assets/js/19.5f9449e8.js" as="script"><link rel="prefetch" href="/assets/js/10.48406e9d.js"><link rel="prefetch" href="/assets/js/11.0894962a.js"><link rel="prefetch" href="/assets/js/12.c840b106.js"><link rel="prefetch" href="/assets/js/13.fa4ff30e.js"><link rel="prefetch" href="/assets/js/14.d1d90514.js"><link rel="prefetch" href="/assets/js/15.5cb8d87f.js"><link rel="prefetch" href="/assets/js/16.3d39496c.js"><link rel="prefetch" href="/assets/js/17.d417d241.js"><link rel="prefetch" href="/assets/js/18.726b31bf.js"><link rel="prefetch" href="/assets/js/3.a2ae1510.js"><link rel="prefetch" href="/assets/js/4.16c498b2.js"><link rel="prefetch" href="/assets/js/5.6cc5f39d.js"><link rel="prefetch" href="/assets/js/6.b3395ce0.js"><link rel="prefetch" href="/assets/js/8.1754cb45.js"><link rel="prefetch" href="/assets/js/9.b8280d92.js">
+    <link rel="preload" href="/assets/css/0.styles.39d1b026.css" as="style"><link rel="preload" href="/assets/js/app.c29e2441.js" as="script"><link rel="preload" href="/assets/js/7.da31186b.js" as="script"><link rel="preload" href="/assets/js/2.6f8b3818.js" as="script"><link rel="preload" href="/assets/js/19.210f3e7e.js" as="script"><link rel="prefetch" href="/assets/js/10.9c58b08f.js"><link rel="prefetch" href="/assets/js/11.b5562272.js"><link rel="prefetch" href="/assets/js/12.f2be3e8d.js"><link rel="prefetch" href="/assets/js/13.b489d9c6.js"><link rel="prefetch" href="/assets/js/14.3203c6f3.js"><link rel="prefetch" href="/assets/js/15.f09b78a4.js"><link rel="prefetch" href="/assets/js/16.046595c3.js"><link rel="prefetch" href="/assets/js/17.54c5330e.js"><link rel="prefetch" href="/assets/js/18.978fd92e.js"><link rel="prefetch" href="/assets/js/3.a2ae1510.js"><link rel="prefetch" href="/assets/js/4.16c498b2.js"><link rel="prefetch" href="/assets/js/5.5bf9b55b.js"><link rel="prefetch" href="/assets/js/6.b9bd3f59.js"><link rel="prefetch" href="/assets/js/8.1754cb45.js"><link rel="prefetch" href="/assets/js/9.9821b7d7.js">
     <link rel="stylesheet" href="/assets/css/0.styles.39d1b026.css">
   </head>
   <body>
@@ -30,15 +30,7 @@
 </a></div><div class="nav-item"><a href="/open.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
   开放平台
 </a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开放平台"><a href="#开放平台" class="header-anchor">#</a> 开放平台</h1> <blockquote><p>实验功能，请勿过度依赖</p></blockquote> <p>喵滴的高级用户可以自己动手搭建功能，自行调用喵滴的开放接口
-目前已经实现的开放能力有：<code>添加文章</code></p> <h3 id="接入文档"><a href="#接入文档" class="header-anchor">#</a> 接入文档</h3> <ol><li>向目标地址：<code>https://sunshinesudio.club:8012/user/open/key</code> 发送post请求，其中字段<code>un</code>为用户名，字段<code>pwd</code>为密码</li></ol> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'https://sunshinesudio.club:8012/user/open/key' \
---form 'un=&quot;用户名&quot;' \
---form 'pwd=&quot;密码&quot;'
-</code></pre></div><ol start="2"><li>保存好喵滴返回给您的开放平台密码<code>key</code>,每次使用第一个步骤，<code>key</code>都会更新</li></ol> <div class="language- extra-class"><pre class="language-text"><code>//第一步返回的正确结果
-{
-    &quot;info&quot;: &quot;key:85H7f36H2Rv2u3fYk9vLiQz&quot;,
-    &quot;code&quot;: 200
-}
-</code></pre></div><p>其中<code>85H7f36H2Rv2u3fYk9vLiQz</code>为<code>key</code>。</p> <ol start="3"><li><code>添加文章</code></li></ol> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'https://sunshinesudio.club:8012/page/open/add' \
+目前已经实现的开放能力有：<code>添加文章</code></p> <h2 id="文档"><a href="#文档" class="header-anchor">#</a> 文档</h2> <h3 id="添加文章-接入文档"><a href="#添加文章-接入文档" class="header-anchor">#</a> <code>添加文章</code> 接入文档</h3> <ol><li><p>到<code>https://api.miaodiapp.com/api/index.html</code>申请喵滴key，并且妥善管理好。长度约，如<code>85H7f36H2Rv2u3fYk9vLiQz</code></p></li> <li><p>接入添加文章接口</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'https://sunshinesudio.club:8012/page/open/add' \
 --form 'key=&quot;开放码&quot;' \
 --form 'Title=&quot;标题&quot;' \
 --form 'Content=&quot;内容&quot;' \
@@ -48,7 +40,7 @@
     &quot;info&quot;: &quot;xxxx&quot;,//文章id
     &quot;code&quot;: 200
 }
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.8c74c1db.js" defer></script><script src="/assets/js/7.da31186b.js" defer></script><script src="/assets/js/2.6f8b3818.js" defer></script><script src="/assets/js/19.5f9449e8.js" defer></script>
+</code></pre></div><ol start="3"><li>官方实例</li></ol> <blockquote><p>该功能仅提供高级会员使用</p></blockquote> <ul><li>到<code>https://api.miaodiapp.com/api/index.html</code>申请喵滴key，并且妥善管理好。长度约，如<code>85H7f36H2Rv2u3fYk9vLiQz</code></li> <li>关注喵滴公众号<code>Libv</code>, 直接输入短语:<code>key:你的key</code> 例如:<code>key:85H7f36H2Rv2u3fYk9vLiQz</code></li> <li>绑定成功后，每次发送文字，会自动保存到喵滴的备份库中。可实现不打开喵滴App存储文字。</li> <li>文字格式1: 纯内容,自动保存到wechat/默认文件夹下。</li> <li>文字格式2: 标题||内容</li> <li>文字格式3: 标题||内容||书本</li> <li>文字格式4: 标题||内容||书本||目录</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c29e2441.js" defer></script><script src="/assets/js/7.da31186b.js" defer></script><script src="/assets/js/2.6f8b3818.js" defer></script><script src="/assets/js/19.210f3e7e.js" defer></script>
   </body>
 </html>
